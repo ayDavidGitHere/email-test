@@ -1,6 +1,6 @@
 <?php
 
-    
+//set credentials at line 53,54,58,59
 
 
 
@@ -55,8 +55,8 @@ function SendEmail($name, $email, $subject, $body, $recipientEmail){
     $phpmailer->SMTPSecure = "ssl";  
     $phpmailer->SMTPAuth = true;
     $phpmailer->Port = 465;
-    $phpmailer->Username = 'address@domain.com'; //SET
-    $phpmailer->Password = 'emailpass'; //SET
+    $phpmailer->Username = 'address@domain.com'; //SET THE EMAIL ACCOUNT YOU CREATED
+    $phpmailer->Password = 'emailpass'; //SET THE PASSWORD FOR YOUR EMAIL ACCOUNT
     
     
     
