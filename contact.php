@@ -1,24 +1,13 @@
 <?php
 
     
-    
-    
-    
-$_POST = [];
-$_POST["name"] = "ayoade";
-$_POST["email"] = "adewoleayoade057@gmail.com";
-$_POST["message"] = "Testing emailing ";
-$_POST["subject"] = "Test";
 
 
 
 
 
 
-
-
-
-$recipientEmail = "adewoleayoade057@gmail.com";
+$recipientEmail = "funmbiogunsola@gmail.com";
 $errors = [];
 $errorMessage = '';
 if (!empty($_POST)) {
@@ -55,19 +44,19 @@ if (!empty($_POST)) {
 
 function SendEmail($name, $email, $subject, $body, $recipientEmail){
     try{
-    include(__DIR__."/../libs/PHPMailer/PHPMailer.php");
-    include(__DIR__."/../libs/PHPMailer/SMTP.php");
-    //include(__DIR__."/../libs/PHPMailer/Exception.php");
+    include(__DIR__."/PHPMailer.php");
+    include(__DIR__."/SMTP.php");
+    //include(__DIR__."/PHPMailer/Exception.php");
     $phpmailer = new PHPMailer();
     //$phpmailer->SMTPDebug = 0; 
     $phpmailer->isSMTP();
-    $phpmailer->Host = 'mail.nextmoonshotgems.com';
+    $phpmailer->Host = 'mail.yourdomain.com'; //SET
     $phpmailer->SMTPAuth   = true;// enable SMTP authentication
     $phpmailer->SMTPSecure = "ssl";  
     $phpmailer->SMTPAuth = true;
     $phpmailer->Port = 465;
-    $phpmailer->Username = 'notifications@nextmoonshotgems.com';
-    $phpmailer->Password = 'CRemilekun247';
+    $phpmailer->Username = 'address@domain.com'; //SET
+    $phpmailer->Password = 'emailpass'; //SET
     
     
     
